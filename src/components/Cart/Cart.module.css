@@ -1,0 +1,22 @@
+.Cart {
+  width: 300px;
+  border-radius: 15px;
+  height: 200px;
+  position: absolute;
+  left: -150px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: hsl(220, 14%, 75%) 0px 2px 6px 2px;
+  top: 40px;
+}
+
+.Cart > h2 {
+  padding: 10px 10px 0 10px;
+  line-height: 20px;
+}
+
+.Cart > p {
+  color: hsl(219, 9%, 45%);
+  text-align: center;
+  padding: 10px;
+}

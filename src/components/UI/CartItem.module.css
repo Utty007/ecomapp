@@ -1,0 +1,16 @@
+.CartItem {
+  display: flex;
+  align-items: center;
+}
+
+.itemImage > img {
+  width: 60px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* .deleteIcon {} */

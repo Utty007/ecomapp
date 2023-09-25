@@ -1,0 +1,103 @@
+.Main {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Part1 {
+  width: 500px;
+  height: 600px;
+}
+
+.part2 > h1 {
+  font-size: 46px;
+  font-weight: 900;
+}
+
+.details {
+  font-size: 20px;
+  color: hsl(219, 9%, 45%);
+}
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  color: hsl(26, 100%, 55%);
+  font-size: 22px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+.promoPricing {
+  display: flex;
+  align-items: center;
+}
+
+.promoPricing > span:first-of-type {
+  font-size: 32px;
+  font-weight: 900;
+  margin-right: 15px;
+}
+
+.promoPricing > span:last-of-type {
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  padding: 3px;
+  font-weight: 900;
+}
+
+.actualPrice {
+  text-decoration: line-through;
+  color: hsl(219, 9%, 45%);
+}
+
+.part2 {
+  width: 40%;
+  font-family: "Kumbh Sans";
+}
+
+.cartFunctionalities {
+  display: flex;
+  align-items: center;
+}
+
+.cartFunction {
+  display: flex;
+  align-items: center;
+  background-color: hsl(223, 64%, 98%);
+  font-weight: 700;
+  border-radius: 10px;
+  width: 100px;
+  padding: 0 10px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.companyName {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(26, 100%, 55%);
+  text-transform: uppercase;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  height: 52px;
+  border-radius: 10px;
+  width: 150px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border: 0;
+  margin-left: 20px;
+  word-spacing: 0.2;
+  cursor: pointer;
+}

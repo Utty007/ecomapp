@@ -1,0 +1,50 @@
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  animation: slide-up 0.3s ease;
+  max-width: 90%; /* Adjust as needed to fit the screen */
+}
+
+.popupProgress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: left;
+  animation: progress-bar 3s linear forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+  .popup {
+    padding: 10px; /* Reduce padding on smaller screens */
+    font-size: 14px; /* Adjust font size for readability */
+  }
+}

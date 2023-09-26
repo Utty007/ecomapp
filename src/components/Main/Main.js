@@ -1,11 +1,16 @@
 import Style from "./Main.module.css";
 import CartIcon from "../UI/CartIcon";
 import Carousel from "../carousel/Carousel";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/cartSlice";
+import { useState } from "react";
+import Popup from "../UI/PopUp";
 
 const Main = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
   const dispatch = useDispatch();
+  const CartItem = useSelector((state) => state.cart.items);
 
   const addItemToCartHandler = () => {
     dispatch(
@@ -15,6 +20,12 @@ const Main = () => {
         id: "p1",
       })
     );
+
+    setPopupMessage("Item added to cart!");
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
   };
 
   const removeItemFromCartHandler = () => {
@@ -23,6 +34,16 @@ const Main = () => {
         id: "p1",
       })
     );
+
+    if (CartItem.length !== 0) {
+      setPopupMessage("Item removed from cart!");
+      setShowPopup(true);
+
+      // Close the popup after 3 seconds (adjust as needed)
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+    }
   };
   return (
     <div className={Style.Main}>
@@ -60,6 +81,9 @@ const Main = () => {
           </span>
         </div>
       </div>
+      {showPopup && (
+        <Popup message={popupMessage} onClose={() => setShowPopup(false)} />
+      )}
     </div>
   );
 };

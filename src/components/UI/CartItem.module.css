@@ -1,16 +1,28 @@
 .CartItem {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  font-family: "Kumbh Sans";
+  padding: 10px;
 }
 
 .itemImage > img {
   width: 60px;
+  border-radius: 5px;
 }
 
 .text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 8px;
+  color: grey;
+}
+
+.price > p {
+  color: black;
+  font-weight: 700;
+  display: inline;
 }
 
 /* .deleteIcon {} */

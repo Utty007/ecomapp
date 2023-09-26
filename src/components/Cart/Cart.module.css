@@ -1,22 +1,44 @@
 .Cart {
-  width: 300px;
   border-radius: 15px;
-  height: 200px;
   position: absolute;
-  left: -150px;
+  left: -200px;
   z-index: 2;
   background-color: white;
   box-shadow: hsl(220, 14%, 75%) 0px 2px 6px 2px;
   top: 40px;
+  width: 350px;
+  height: 200px;
+}
+
+.hr {
+  color: grey;
 }
 
 .Cart > h2 {
-  padding: 10px 10px 0 10px;
+  padding: 10px 10px 10px 10px;
   line-height: 20px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid rgb(187, 186, 186);
 }
 
 .Cart > p {
   color: hsl(219, 9%, 45%);
   text-align: center;
   padding: 10px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border: 0;
+  margin-left: 20px;
+  word-spacing: 0.2;
+  cursor: pointer;
 }

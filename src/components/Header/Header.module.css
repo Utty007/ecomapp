@@ -58,3 +58,17 @@
   border-radius: 40%;
   font-weight: 800;
 }
+
+.menuBar {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .menuBar {
+    display: block;
+  }
+
+  .Links {
+    display: none;
+  }
+}

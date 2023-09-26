@@ -22,7 +22,10 @@ const CartItem = (props) => {
       <span className={Styles.text}>
         <span>{props.title}</span>
         <span>
-          {`${props.price} x ${props.quantity}`} ${props.totalAmount.toFixed(2)}
+          {`${props.price} x ${props.quantity}`}{" "}
+          <span className={Styles.price}>
+            <p>${props.totalAmount.toFixed(2)}</p>
+          </span>
         </span>
       </span>
       <span className={Styles.deleteIcon}>

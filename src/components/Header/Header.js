@@ -6,6 +6,7 @@ import Cart from "../Cart/Cart";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../store/ui-slice";
 import { useSelector } from "react-redux";
+import menuBar from "../../Images/icon-menu.svg";
 
 const Header = (props) => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Header = (props) => {
   return (
     <div className={Style.Header}>
       <div className={Style.sideOne}>
+        <img className={Style.menuBar} src={menuBar} />
         <div>
           <img src={sneakersLogo} />
         </div>

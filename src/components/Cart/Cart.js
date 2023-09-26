@@ -1,6 +1,7 @@
 import Style from "./Cart.module.css";
 import CartItem from "../UI/CartItem";
 import { useSelector } from "react-redux";
+import CartIcon from "../UI/CartIcon";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -9,7 +10,6 @@ const Cart = () => {
   return (
     <div className={Style.Cart}>
       <h2>Cart</h2>
-      <hr />
       {cartItems.length === 0 ? (
         <p>Cart is empty</p>
       ) : (
@@ -23,6 +23,13 @@ const Cart = () => {
             totalAmount={cartItem.totalPrice}
           />
         ))
+      )}
+      {cartItems.length === 0 ? null : (
+        <button className={Style.cta}>
+          {" "}
+          <CartIcon />
+          Proceed to Checkout
+        </button>
       )}
     </div>
   );

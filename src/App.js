@@ -18,10 +18,11 @@ function App() {
   return (
     <div className={navBarState && "App"}>
       {navBarState && (
-        <Backdrop onClick={navBarToggleHandler}>
-          <MobileNav />
-        </Backdrop>
+        <>
+          <Backdrop onClick={navBarToggleHandler} />
+        </>
       )}
+      <MobileNav />
       <Header />
       <Main />
     </div>

@@ -117,3 +117,17 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .Part1 {
+    width: 100%;
+  }
+
+  .Main {
+    width: 100%;
+  }
+
+  .part2 {
+    padding: 20px;
+  }
+}

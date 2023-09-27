@@ -1,13 +1,12 @@
 .Cart {
   border-radius: 15px;
   position: absolute;
-  left: -200px;
+  left: -250px;
   z-index: 2;
   background-color: white;
   box-shadow: hsl(220, 14%, 75%) 0px 2px 6px 2px;
   top: 40px;
   width: 350px;
-  height: 200px;
 }
 
 .hr {
@@ -34,6 +33,7 @@
   padding: 12px;
   width: 90%;
   margin: auto;
+  margin-bottom: 20px;
   border-radius: 10px;
   background-color: hsl(26, 100%, 55%);
   color: white;
@@ -41,4 +41,12 @@
   margin-left: 20px;
   word-spacing: 0.2;
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .Cart {
+    left: unset;
+    right: -100%;
+    width: 80vw;
+  }
 }

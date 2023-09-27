@@ -3,14 +3,20 @@ import sneakersLogo from "../../Images/logo.svg";
 import cartICon from "../../Images/icon-cart.svg";
 import avatar from "../../Images/image-avatar.png";
 import Cart from "../Cart/Cart";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../store/ui-slice";
 import { useSelector } from "react-redux";
 import menuBar from "../../Images/icon-menu.svg";
+import closeBar from "../../Images/icon-close.svg";
 
 const Header = (props) => {
   const dispatch = useDispatch();
+  const navBarState = useSelector((state) => state.ui.navBarIsVisible);
 
+  const navBarToggleHandler = () => {
+    dispatch(uiActions.toggleNavbar());
+  };
   const displayCartHandler = () => {
     dispatch(uiActions.toggle());
   };
@@ -20,7 +26,11 @@ const Header = (props) => {
   return (
     <div className={Style.Header}>
       <div className={Style.sideOne}>
-        <img className={Style.menuBar} src={menuBar} />
+        <img
+          onClick={navBarToggleHandler}
+          className={Style.menuBar}
+          src={navBarState ? closeBar : menuBar}
+        />
         <div>
           <img src={sneakersLogo} />
         </div>

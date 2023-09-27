@@ -109,6 +109,10 @@
     max-width: 500px;
   }
 
+  .part2 {
+    margin-bottom: 100px;
+  }
+
   .cartFunctionalities {
     justify-content: center;
   }
